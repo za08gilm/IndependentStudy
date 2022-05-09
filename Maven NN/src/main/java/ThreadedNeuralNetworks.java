@@ -83,10 +83,11 @@ public class ThreadedNeuralNetworks implements Runnable {
             while (testIter.hasNext()) {
                 for (NNThread nnt : threads) {
                     if (!nnt.isRunning()) {
-                        DataSet testMnist = testIter.next();
-                        INDArray predict2 = model.output(testMnist.getFeatureMatrix());
-                        nnt.setDataSet(testMnist); nnt.setINDArray(predict2);
-
+                        synchronized(lock) {                         
+                            DataSet testMnist = testIter.next();
+                            INDArray predict2 = model.output(testMnist.getFeatureMatrix());
+                            nnt.setDataSet(testMnist); nnt.setINDArray(predict2);
+                        }
                     }
                 }
             }
