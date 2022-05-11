@@ -10,8 +10,8 @@ VERSION or DATE: Spring 2022
 AUTHORS: Modified by Zack Gilman
 USER INSTRUCTIONS: 
   In a Unix environment, when in the directory the .java file is located, type in the following commands
-    javac -cp .:/home/[user]/[project directory]/jars/weka.jar ClassficationWeka.java
-    java -cp .:/home/[user]/[project directory]/jars/weka.jar ClassficationWeka
+    javac -cp .:/home/[user]/[project directory]/jars/weka.jar (Threaded)ClassficationWeka.java
+    java -cp .:/home/[user]/[project directory]/jars/weka.jar (Threaded)ClassficationWeka
     
   In the BlueJ IDE, in order to load the Weka.jar file, go to:
     Tools -> Preferences -> Libraries -> Add file
